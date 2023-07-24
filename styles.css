@@ -1,0 +1,174 @@
+/* Set the default styles for the sections */
+section {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+font {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Quicksand', sans-serif;
+    color: #fff; /* Darker text color */
+    font-size: 2rem;
+}
+h3 {
+    font-family: 'Quicksand', sans-serif;
+    color: #fff; /* Darker text color */
+    font-size: 1.25rem;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff; /* Slightly darker text color */
+    font-size: 1.11rem;
+}
+
+/* Apply the updated gradient background */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    background: linear-gradient(135deg, #FFD1DD, #A49BFF, #240090);
+    background-size: 100% 200%;
+    background-position: top;
+    transition: background-position 0.5s;
+}
+
+/* When user scrolls down, move the gradient */
+body.scroll {
+    background-position: center bottom;
+}
+
+/* Add styles for the navbar */
+nav {
+    background-color: #FFD1DD; /* Light pink */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+}
+
+nav a:hover {
+    background-color: #FF7FAB; /* Darker pink on hover */
+    border-radius: 1px;
+    transition: background-color 0.2s;
+}
+
+/* Style the navbar links to have some spacing between them */
+nav a:not(:last-child) {
+    margin-right: 20px;
+}
+
+/* Style the contact form */
+#contact {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+#contact h2 {
+    color: #fff; /* Darker text color */
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    color: #fff; /* Slightly darker text color */
+    line-height: 1.5;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    color: #fff;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #555;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+/* Add a slight box shadow on focus */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    padding: 12px;
+background-color: #FF7FAB;
+    color: #fff;
+    border: none;
+    border-radius: 33px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    max-width: 222px;
+}
+
+button:hover {
+    background-color: #FFD1DD;
+}
+
+.collapsible {
+
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+
+  
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+
+  }
+
+
+  .center-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Adjust the margin as needed */
+}
