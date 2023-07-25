@@ -2,8 +2,8 @@
 <html>
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;700&family=Quicksand:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;700&family=Quicksand:wght@300;600&display=swap" rel="stylesheet">
     <title>Intuition Illumination</title>
     <link rel="stylesheet" href="styles.css">
 
@@ -12,79 +12,214 @@
     <nav>
         <a href="#services">SERVICES</a>
         <a href="#contact">CONTACT</a>
+        <a href="#faq">FAQ</a>
     </nav>
 
     <section id="home">
         <center>
         <br><br><br><Br>
         <h1>Hi, I'm Abigail Aguilar.</h1>
-        <p> Through the alchemy of intuition and innovation, I seek to illuminate paths unknown and unveil the hidden potentials that lie within.</p>  
-        <br><br><Br>
+        <p>INTUITIVE GUIDE<br>Through the alchemy of intuition and innovation, I seek to illuminate paths unknown and unveil the hidden potentials that lie within.</p>  
+        <br>
     </center>
     </section>
 
     <section id="services">
         <center>
-        <h2>Services</h2>
-        <br>
-        <p>Discover profound insights, find clarity, and awaken your inner wisdom with my intuitive Tarot readings.</p>
-        <p>Please allow up to 24-72 hours to receive your reading.</p>
-        <button type="button" class="collapsible">Text Readings‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  +</button>
-        <div class="content">
-            <h3>Basic Information and Guidance - $33</h3>
-            <p>Receive a short and sweet text reading that provides essential information and guidance to address your specific questions or concerns. This option is perfect if you're seeking quick insights and clarity.</p>           
-            <div class="center-button"> <!-- Add a new div to center the button -->
-                <form action="https://www.paypal.com/donate" method="post" target="_top">
-                    <input type="hidden" name="hosted_button_id" value="ELXJFTS699CUA" />
-                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" style="width: 120px;" />
-                    <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-                    </form>
-                    
-            </div>
+            <h2>Services</h2>
+            <p>Discover profound insights, find clarity, and awaken your inner wisdom with my intuitive Tarot readings.</p>
+            <p>When you purchase any reading, remember to email your question ( abigailstarot@gmail.com ) or fill out the contact form on the front page. Make sure to include any names/birthdays of people involved or relevant details.</p>
+            <p>Please allow up to 24-72 hours to receive your reading.</p>
+            <!-- First PayPal Button -->
+            <button type="button" class="collapsible"><p>Text Readings +</p></button>
+            <div class="content" style="display: none;">
+                <h3>Basic Information and Guidance - $33</h3>
+                <p>Receive a short and sweet text reading that provides essential information and guidance to address your specific questions or concerns. This option is perfect if you're seeking quick insights and clarity.</p>
+                <div class="center-button">
+                    <div id="paypal-button-container-1"></div> <!-- Unique ID for the first PayPal button -->
+                    <script src="https://www.paypal.com/sdk/js?client-id=AUvvZfRJrAR-usDK3nyGo58Z-b_FNVjoKvZ9XBSQuzg5SdAT5DZdfUUrQmejmilAe8Y4TaIYVjSogjiQ"></script>
+                    <script>
+                        paypal.Buttons({
+                            createOrder: function(data, actions) {
+                                return actions.order.create({
+                                    purchase_units: [{
+                                        amount: {
+                                            value: '33.00'
+                                        }
+                                    }]
+                                });
+                            },
+                            onApprove: function(data, actions) {
+                                return actions.order.capture().then(function(details) {
+                                    alert('Payment successful! Transaction completed by ' + details.payer.name.given_name);
+                                });
+                            },
+                            onError: function(err) {
+                                console.error('Error:', err);
+                                alert('An error occurred during the payment. Please try again later.');
+                            }
+                        }).render('#paypal-button-container-1'); // Render the button inside the specified container
+                    </script>
+                </div>
+                            
+            <!-- Second PayPal Button -->
             <h3>In-Depth Analysis and Detailed Insights - $66</h3>
-            <p>Dive deep into your situation with a comprehensive written reading. Explore the intricate details, hidden influences, and potential outcomes as the tarot cards unveil valuable insights and guidance. This option is ideal for those seeking a more profound understanding and extensive guidance. Ask up to 3 sub questions regarding your primary situation or 2 questions regarding another situation. </p> 
-            <div class="center-button"> <!-- Add a new div to center the button -->
-                <form action="https://www.paypal.com/donate" method="post" target="_top">
-                    <input type="hidden" name="hosted_button_id" value="ELXJFTS699CUA" />
-                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" style="width: 120px;" />
-                    <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-                    </form>
-                    
-                    
+            <p>Dive deep into your situation with a comprehensive written reading. Explore the intricate details, hidden influences, and potential outcomes as the tarot cards unveil valuable insights and guidance. This option is ideal for those seeking a more profound understanding and extensive guidance. Ask up to 3 sub questions regarding your primary situation or 2 questions regarding another situation. </p>
+            <div class="center-button">
+                <div id="paypal-button-container-2"></div> <!-- Unique ID for the second PayPal button -->
+                <script>
+                    paypal.Buttons({
+                        createOrder: function(data, actions) {
+                            return actions.order.create({
+                                purchase_units: [{
+                                    amount: {
+                                        value: '66.00'
+                                    }
+                                }]
+                            });
+                        },
+                        onApprove: function(data, actions) {
+                            return actions.order.capture().then(function(details) {
+                                alert('Payment successful! Transaction completed by ' + details.payer.name.given_name);
+                            });
+                        },
+                        onError: function(err) {
+                            console.error('Error:', err);
+                            alert('An error occurred during the payment. Please try again later.');
+                        }
+                    }).render('#paypal-button-container-2'); // Render the button inside the specified container
+                </script>
             </div>
-        </div>
-                
+
+            </div>
+            
         </div>
         ‎ ‎ ‎ ‎ ‎ ‎
-        <button type="button" class="collapsible">Video Readings‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎  +</button>
+        <button type="button" class="collapsible"><p>Video Readings +</p></button>
         <div class="content">
             <h3>Concise Overview and Key Points - $44</h3>
             <p>Experience a visual tarot reading where I provide a condensed overview of your situation, key points, and guidance. This option offers a personal touch and the convenience of watching the reading at your own pace. This video can last from 10-45 minutes depending on your question.</p>
             <div class="center-button"> <!-- Add a new div to center the button -->
-                <form action="https://www.paypal.com/donate" method="post" target="_top">
-                    <input type="hidden" name="hosted_button_id" value="ELXJFTS699CUA" />
-                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" style="width: 120px;" />
-                    <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-                    </form>
+                <div id="paypal-button-container-3"></div> <!-- Unique ID for the second PayPal button -->
+                <script>
+                    paypal.Buttons({
+                        createOrder: function(data, actions) {
+                            return actions.order.create({
+                                purchase_units: [{
+                                    amount: {
+                                        value: '44.00'
+                                    }
+                                }]
+                            });
+                        },
+                        onApprove: function(data, actions) {
+                            return actions.order.capture().then(function(details) {
+                                alert('Payment successful! Transaction completed by ' + details.payer.name.given_name);
+                            });
+                        },
+                        onError: function(err) {
+                            console.error('Error:', err);
+                            alert('An error occurred during the payment. Please try again later.');
+                        }
+                    }).render('#paypal-button-container-3'); // Render the button inside the specified container
+                </script>
                     
             </div>
             <h3>Comprehensive Interpretation and Detailed Exploration - $111</h3>
             <p>Immerse yourself in a detailed video reading that offers a comprehensive interpretation of the tarot cards and an in-depth exploration of your situation. Gain a deeper understanding of the energies at play, receive valuable guidance, and witness the reading process unfold before your eyes. Ask up to 2 questions regarding your primary question. This video can last from 30-60 minutes depending on your questions and situation.</p>    
             <div class="center-button"> <!-- Add a new div to center the button -->
-                <form action="https://www.paypal.com/donate" method="post" target="_top">
-                    <input type="hidden" name="hosted_button_id" value="ELXJFTS699CUA" />
-                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" style="width: 120px;" />
-                    <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-                    </form>
-                    
-        </div><br>
+                <div id="paypal-button-container-4"></div> <!-- Unique ID for the second PayPal button -->
+                <script>
+                    paypal.Buttons({
+                        createOrder: function(data, actions) {
+                            return actions.order.create({
+                                purchase_units: [{
+                                    amount: {
+                                        value: '111.00'
+                                    }
+                                }]
+                            });
+                        },
+                        onApprove: function(data, actions) {
+                            return actions.order.capture().then(function(details) {
+                                alert('Payment successful! Transaction completed by ' + details.payer.name.given_name);
+                            });
+                        },
+                        onError: function(err) {
+                            console.error('Error:', err);
+                            alert('An error occurred during the payment. Please try again later.');
+                        }
+                    }).render('#paypal-button-container-4'); // Render the button inside the specified container
+                </script>
+                </div>
+            </div>
+        </div>
     </center>
+    </section>
+
+    <section id="faq">
+        <center>
+            <button type="button" class="collapsible transparent-button"><h2>FAQ ↓</h2></button>
+            <div class="content" style="display: none;">
+                <p><b>1. What is Tarot?</b><br>
+                    Tarot is an ancient divination practice that uses a deck of cards to gain insights and guidance into various aspects of life, including relationships, career, and personal growth. It's a tool for self-reflection and connecting with your intuition.
+                    <br><br>
+                    <b>2. How do your Tarot readings work?</b><br>
+                    During a Tarot reading, I will use the Tarot cards to tap into your energy and provide you with intuitive insights and guidance. You may ask specific questions or simply request a general reading for a broader perspective.
+                    <br><br>
+                    <b>3. Are Tarot readings accurate?</b><br>
+                    Tarot readings are subjective and based on the interpretation of the cards. While I strive to provide accurate and meaningful insights, please understand that Tarot is for entertainment purposes only and not meant to replace professional advice.
+                    <br><br>
+                    <b>4. How can I purchase a Tarot reading with you?</b><br>
+                    Ordering a Tarot reading is easy! Simply visit the "Services" page on my website, Intuition Illumination, and choose the reading that resonates with you. Once your reading is purchased, leave a note or send me an email/text containing your question(s) and any other information. 
+                    <br><br>
+                    <b>5. What types of Tarot readings do you offer?<br></b>
+                    I offer a range of Tarot readings, each designed to cater to your unique needs:
+                    <br><br>
+                    <b>General Tarot Reading:</b> Seek clarity on various aspects of your life with a broad perspective.
+                    <br><br>
+                    <b>Love and Relationships Reading:</b> Delve into the dynamics of your love life and gain insights into your romantic connections.
+                    <br><br>
+                    <b>Career and Finances Reading:</b> Explore the energies surrounding your professional life and financial situation.
+                    <br><br>
+                    <b>Specific Questions Reading:</b> Get detailed insights and answers to your burning questions and concerns.
+                    <br><br>
+                    <b>Three-Card Spread: Past, Present, Future:</b> Get quick yet meaningful insights into your life's journey with a snapshot of the past, present, and potential future.
+                    <br><br>
+                    <b>In-Depth Life Path Reading:</b> Embark on a transformative journey of self-discovery and gain insights into your life's purpose and spiritual journey.
+                    <br><br>
+                    <b>Custom Tarot Spread:</b> Tailored to address your specific needs and concerns with a unique approach.
+                    <br><br>
+                    <b>6. Can I ask specific questions during a reading?</b><br>
+                    Absolutely! You are welcome to ask specific questions related to your life or concerns. The more specific your questions, the more focused the guidance can be.
+                    <br><br>
+                    <b>7. Is my personal information kept confidential?</b><br>
+                    Yes, your privacy is essential to me. I treat all personal information with utmost confidentiality, and your data is handled in accordance with our Privacy Policy.
+                    <br><br>
+                    <b>8. What should I expect during a Tarot reading?</b><br>
+                    During a reading, I will provide you with the insights and interpretations that come through the Tarot cards. You can expect a safe and supportive environment throughout the session.
+                    <br><br>
+                    <b>9. Can Tarot predict the future?</b><br>
+                    Tarot does not predict the future with certainty. Instead, it offers guidance and potential outcomes based on the current energies and circumstances. Your actions and choices also play a significant role in shaping your future.
+                    <br><br>
+                    <b>10. Are you a certified Tarot reader?</b><br>
+                    While I am not certified, I have studied and practiced Tarot for many years. My readings come from a place of intuition, empathy, and a deep understanding of the Tarot symbolism.
+                    <br><br>
+                    <b>11. What payment methods do you accept?</b><br>
+                    I currently accept payments through PayPal. It's a secure and convenient way to complete your transaction.
+                    <br><br>
+                    <b>12. What is your refund policy?</b><br>
+                    Refunds are dealt with on a case-by-case basis. If you have concerns about your reading, please contact me at abigailstarot@gmail.com, and I'll be happy to discuss the matter.
+                    <br><br>
+                    <b>13. How long does it take to receive my reading?</b><br>
+                    For text readings, please allow up to 24-72 hours to receive your reading after payment confirmation. For comprehensive written readings, the delivery time may vary based on the reading's complexity.</p>
+            </div>
+        </center>
     </section>
 
     <section id="contact">
         <center>
         <h2>Contact Me</h2>
-        <br>
         <p>After purchasing a reading, please contact me.</p>
         <p>Email: abigailstarot@gmail.com</p>
         <p>Phone: 949-534-4488</p>
@@ -140,4 +275,10 @@
     </script>
 
 </body>
+<footer>
+    <center>
+        <a href="privacy-policy.html"><h4>Privacy Policy</h4></a>
+        <a href="terms-and-conditions.html"><h4>Terms & Conditions</h4></a>
+    </center>
+</footer>
 </html>
