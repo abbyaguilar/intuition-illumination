@@ -16,12 +16,12 @@ font {
 h1, h2 {
     font-family: 'Quicksand', sans-serif;
     color: #fff; /* Darker text color */
-    font-size: 2rem;
+    font-size: 2.88rem;
 }
 h3 {
     font-family: 'Quicksand', sans-serif;
     color: #fff; /* Darker text color */
-    font-size: 1.25rem;
+    font-size: 1.22rem;
 }
 h4 {
     font-family: 'Quicksand', sans-serif;
@@ -32,7 +32,7 @@ h4 {
 p {
     font-family: 'Montserrat', sans-serif;
     color: #fff; /* Slightly darker text color */
-    font-size: 1.01rem;
+    font-size: 1.02rem;
 }
 h5 {
     font-family: 'Montserrat', sans-serif;
