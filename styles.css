@@ -4,6 +4,8 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-left: 22%;
+    padding-right: 22%;
 }
 
 font {
@@ -56,7 +58,7 @@ body.scroll {
 
 /* Add styles for the navbar */
 nav {
-    background-color: #FFD1DD; /* Light pink */
+    background-color: #FF7FAB; /* Light pink */
     color: #fff;
     display: flex;
     justify-content: center;
@@ -76,7 +78,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #FF7FAB; /* Darker pink on hover */
+    background-color: #FFD1DD; /* Darker pink on hover */
     border-radius: 1px;
     transition: background-color 0.2s;
 }
