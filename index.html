@@ -37,134 +37,36 @@
         <center>
             <h2>Services</h2>
             <p>Discover profound insights, find clarity, and awaken your inner wisdom with my intuitive Tarot readings.</p>
-            <p>When you purchase any reading, remember to email your question ( abigailstarot@gmail.com ) or fill out the contact form on the front page. Make sure to include any names/birthdays of people involved or relevant details.</p>
+            <p>When you purchase any reading, remember to email your question (abigailstarot@gmail.com) or fill out the contact form on the front page. Make sure to include any names/birthdays of people involved or relevant details.</p>
             <p>Please allow up to 24-72 hours to receive your reading.</p>
-            <!-- First PayPal Button -->
+    
+            <!-- Text Readings -->
             <button type="button" class="collapsible"><p>Text Readings +</p></button>
-            <div class="content" style="display: none;">
+            <div class="content">
                 <h3>Basic Information and Guidance - $33</h3>
                 <p>Receive a short and sweet text reading that provides essential information and guidance to address your specific questions or concerns. This option is perfect if you're seeking quick insights and clarity.</p>
-                <div class="center-button">
-                    <div id="paypal-button-container-1"></div> <!-- Unique ID for the first PayPal button -->
-                    <script src="https://www.paypal.com/sdk/js?client-id=AUvvZfRJrAR-usDK3nyGo58Z-b_FNVjoKvZ9XBSQuzg5SdAT5DZdfUUrQmejmilAe8Y4TaIYVjSogjiQ"></script>
-                    <script>
-                        paypal.Buttons({
-                            createOrder: function(data, actions) {
-                                return actions.order.create({
-                                    purchase_units: [{
-                                        amount: {
-                                            value: '33.00'
-                                        }
-                                    }]
-                                });
-                            },
-                            onApprove: function(data, actions) {
-                                return actions.order.capture().then(function(details) {
-                                    alert('Payment successful! Transaction completed by ' + details.payer.name.given_name);
-                                });
-                            },
-                            onError: function(err) {
-                                console.error('Error:', err);
-                                alert('An error occurred during the payment. Please try again later.');
-                            }
-                        }).render('#paypal-button-container-1'); // Render the button inside the specified container
-                    </script>
-                </div>
-                            
-            <!-- Second PayPal Button -->
-            <h3>In-Depth Analysis and Detailed Insights - $66</h3>
-            <p>Dive deep into your situation with a comprehensive written reading. Explore the intricate details, hidden influences, and potential outcomes as the tarot cards unveil valuable insights and guidance. This option is ideal for those seeking a more profound understanding and extensive guidance. Ask up to 3 sub questions regarding your primary situation or 2 questions regarding another situation. </p>
-            <div class="center-button">
-                <div id="paypal-button-container-2"></div> <!-- Unique ID for the second PayPal button -->
-                <script>
-                    paypal.Buttons({
-                        createOrder: function(data, actions) {
-                            return actions.order.create({
-                                purchase_units: [{
-                                    amount: {
-                                        value: '66.00'
-                                    }
-                                }]
-                            });
-                        },
-                        onApprove: function(data, actions) {
-                            return actions.order.capture().then(function(details) {
-                                alert('Payment successful! Transaction completed by ' + details.payer.name.given_name);
-                            });
-                        },
-                        onError: function(err) {
-                            console.error('Error:', err);
-                            alert('An error occurred during the payment. Please try again later.');
-                        }
-                    }).render('#paypal-button-container-2'); // Render the button inside the specified container
-                </script>
-            </div>
+                <div id="paypal-button-container-1"></div>
 
+                <h3>In-Depth Analysis and Detailed Insights - $66</h3>
+                <p>Dive deep into your situation with a comprehensive written reading. Explore the intricate details, hidden influences, and potential outcomes as the tarot cards unveil valuable insights and guidance. This option is ideal for those seeking a more profound understanding and extensive guidance. Ask up to 3 sub questions regarding your primary situation or 2 questions regarding another situation.</p>
+                <div id="paypal-button-container-2"></div>
             </div>
             
-        </div>
-        ‎ ‎ ‎ ‎ ‎ ‎
-        <button type="button" class="collapsible"><p>Video Readings +</p></button>
-        <div class="content">
-            <h3>Concise Overview and Key Points - $44</h3>
-            <p>Experience a visual tarot reading where I provide a condensed overview of your situation, key points, and guidance. This option offers a personal touch and the convenience of watching the reading at your own pace. This video can last from 10-45 minutes depending on your question.</p>
-            <div class="center-button"> <!-- Add a new div to center the button -->
-                <div id="paypal-button-container-3"></div> <!-- Unique ID for the second PayPal button -->
-                <script>
-                    paypal.Buttons({
-                        createOrder: function(data, actions) {
-                            return actions.order.create({
-                                purchase_units: [{
-                                    amount: {
-                                        value: '44.00'
-                                    }
-                                }]
-                            });
-                        },
-                        onApprove: function(data, actions) {
-                            return actions.order.capture().then(function(details) {
-                                alert('Payment successful! Transaction completed by ' + details.payer.name.given_name);
-                            });
-                        },
-                        onError: function(err) {
-                            console.error('Error:', err);
-                            alert('An error occurred during the payment. Please try again later.');
-                        }
-                    }).render('#paypal-button-container-3'); // Render the button inside the specified container
-                </script>
-                    
+            
+            <!-- Video Readings -->
+            <button type="button" class="collapsible"><p>Video Readings +</p></button>
+            <div class="content" style="display: none;">
+                <h3>Concise Overview and Key Points - $44</h3>
+                <p>Experience a visual tarot reading where I provide a condensed overview of your situation, key points, and guidance. This option offers a personal touch and the convenience of watching the reading at your own pace. This video can last from 10-45 minutes depending on your question.</p>
+                <div id="paypal-button-container-3"></div>
+                <h3>Comprehensive Interpretation and Detailed Exploration - $111</h3>
+                <p>Immerse yourself in a detailed video reading that offers a comprehensive interpretation of the tarot cards and an in-depth exploration of your situation. Gain a deeper understanding of the energies at play, receive valuable guidance, and witness the reading process unfold before your eyes. Ask up to 2 questions regarding your primary question. This video can last from 30-60 minutes depending on your questions and situation.</p>
+                <div id="paypal-button-container-4"></div> <!-- Unique ID for the fourth PayPal button -->
+                
             </div>
-            <h3>Comprehensive Interpretation and Detailed Exploration - $111</h3>
-            <p>Immerse yourself in a detailed video reading that offers a comprehensive interpretation of the tarot cards and an in-depth exploration of your situation. Gain a deeper understanding of the energies at play, receive valuable guidance, and witness the reading process unfold before your eyes. Ask up to 2 questions regarding your primary question. This video can last from 30-60 minutes depending on your questions and situation.</p>    
-            <div class="center-button"> <!-- Add a new div to center the button -->
-                <div id="paypal-button-container-4"></div> <!-- Unique ID for the second PayPal button -->
-                <script>
-                    paypal.Buttons({
-                        createOrder: function(data, actions) {
-                            return actions.order.create({
-                                purchase_units: [{
-                                    amount: {
-                                        value: '111.00'
-                                    }
-                                }]
-                            });
-                        },
-                        onApprove: function(data, actions) {
-                            return actions.order.capture().then(function(details) {
-                                alert('Payment successful! Transaction completed by ' + details.payer.name.given_name);
-                            });
-                        },
-                        onError: function(err) {
-                            console.error('Error:', err);
-                            alert('An error occurred during the payment. Please try again later.');
-                        }
-                    }).render('#paypal-button-container-4'); // Render the button inside the specified container
-                </script>
-                </div>
-            </div>
-        </div>
-    </center>
+        </center>
     </section>
+    
 
     <section id="faq">
         <center>
@@ -282,6 +184,110 @@
       });
     }
     </script>
+
+
+<!-- Include the PayPal SDK script -->
+<script src="https://www.paypal.com/sdk/js?client-id=AbTGWmYDTwrEAQ1BvcaYCGcsIdcT3azSLN4qAIIwcVbNdFKqsPcx6y8z6OC0TmeH_f87-4K9cRR-sWVd"></script>
+<script>
+    // Render PayPal buttons for each service
+    paypal.Buttons({
+        createOrder: function(data, actions) {
+            // Set up the order details, including amount, item name, etc.
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: '33.00' // Set the appropriate value for each service
+                    },
+                    description: '1 Text Question Tarot Reading' // Set the service name here
+                }]
+            });
+        },
+        onApprove: function(data, actions) {
+            // Capture the payment and perform necessary actions
+            return actions.order.capture().then(function(details) {
+                // You can perform actions after the payment is captured
+                // For example, show a thank you message to the user
+            });
+        },
+        onError: function(err) {
+            // Handle any errors that might occur during the payment process
+        }
+    }).render('#paypal-button-container-1'); // Replace with the appropriate container ID
+
+    // Repeat the above code for each PayPal button container and service
+
+    paypal.Buttons({
+        createOrder: function(data, actions) {
+            // Set up the order details, including amount, item name, etc.
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: '66.00' // Set the appropriate value for each service
+                    },
+                    description: '3 Text Question Tarot Reading' // Set the service name here
+                }]
+            });
+        },
+        onApprove: function(data, actions) {
+            // Capture the payment and perform necessary actions
+            return actions.order.capture().then(function(details) {
+                // You can perform actions after the payment is captured
+                // For example, show a thank you message to the user
+            });
+        },
+        onError: function(err) {
+            // Handle any errors that might occur during the payment process
+        }
+    }).render('#paypal-button-container-2'); // Replace with the appropriate container ID
+
+    paypal.Buttons({
+        createOrder: function(data, actions) {
+            // Set up the order details, including amount, item name, etc.
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: '44.00' // Set the appropriate value for each service
+                    },
+                    description: '1 Video Question Tarot Reading' // Set the service name here
+                }]
+            });
+        },
+        onApprove: function(data, actions) {
+            // Capture the payment and perform necessary actions
+            return actions.order.capture().then(function(details) {
+                // You can perform actions after the payment is captured
+                // For example, show a thank you message to the user
+            });
+        },
+        onError: function(err) {
+            // Handle any errors that might occur during the payment process
+        }
+    }).render('#paypal-button-container-3'); // Replace with the appropriate container ID
+
+    paypal.Buttons({
+        createOrder: function(data, actions) {
+            // Set up the order details, including amount, item name, etc.
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: '111.00' // Set the appropriate value for each service
+                    },
+                    description: '3 Text Question Tarot Reading' // Set the service name here
+                }]
+            });
+        },
+        onApprove: function(data, actions) {
+            // Capture the payment and perform necessary actions
+            return actions.order.capture().then(function(details) {
+                // You can perform actions after the payment is captured
+                // For example, show a thank you message to the user
+            });
+        },
+        onError: function(err) {
+            // Handle any errors that might occur during the payment process
+        }
+    }).render('#paypal-button-container-4'); // Replace with the appropriate container ID
+</script>
 
 </body>
 <footer>
